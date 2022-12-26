@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10 # (1)
+    commands:
+      - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin  # (2)
+  pre_build:
+    commands:
+      - npm install # (3)
+  build:
+    commands:
+      - docker build -t mids29/sample-app . # (5)
+  post_build:
+    commands:
+      - docker push mids29/sample-app
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .
+  name: codepipeline-us-east-1-330790849211
+  discard-paths: no
