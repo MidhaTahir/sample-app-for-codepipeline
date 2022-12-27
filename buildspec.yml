@@ -18,6 +18,6 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: .
+  base-directory: build
   name: codepipeline-us-east-1-681053331660
   discard-paths: no
