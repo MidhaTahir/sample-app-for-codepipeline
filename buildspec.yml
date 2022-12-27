@@ -19,5 +19,5 @@ artifacts:
   files:
     - '**/*'
   base-directory: .
-  name: codepipeline-us-east-1-330790849211
+  name: codepipeline-us-east-1-681053331660
   discard-paths: no
